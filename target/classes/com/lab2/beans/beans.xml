@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="studentBean" class="com.lab3.Student">
+		<constructor-arg value="John"></constructor-arg>
+		<constructor-arg value="Kelly"></constructor-arg>
+		<constructor-arg ref="courseBean"></constructor-arg>
+	</bean>
+	<bean id="courseBean" class="com.lab3.Course">
+	<constructor-arg value="4555"></constructor-arg>
+		<constructor-arg value="Arts"></constructor-arg>
+		<constructor-arg ref="lecturerBean"></constructor-arg>
+	
+	</bean>
+	<bean id="lecturerBean" class="com.lab3.Lecturer">
+	<constructor-arg value="Jenny"></constructor-arg>
+		<constructor-arg value="Hall"></constructor-arg>
+		<constructor-arg value="15"></constructor-arg>
+	</bean>
+</beans>
